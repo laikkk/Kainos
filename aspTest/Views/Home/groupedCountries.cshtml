@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Languages by Numbers";
+}
+@model List<aspTest.Models.GrupedCountriesModelBase>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead style="font-weight:bold;">    
+                    <tr>
+                        <td>Language</td>
+                        <td>Population Use</td>
+                        <td>Global Population % Use</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Language</td>
+                            <td>@item.Population_Use</td>
+                            <td>@item.Global_Population_Percent_Use</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+    </div>
